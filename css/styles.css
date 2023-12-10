@@ -545,8 +545,15 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px)
     margin-left: 16px;
 }
 
+/* ========== Mobile menu ========== */
+/* ========== Mobile menu ========== */
+
+
+
 /* ========== Backdrop ========== */
 /* ========== Backdrop ========== */
+
+
 
 
 /* min - width : 768 px */
@@ -728,6 +735,13 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px)
 .footer-social-list-link:focus {
     background-color: #31D0AA; 
 }
+
+/* ========== Mobile menu ========== */
+
+/* ========== Backdrop ========== */
+
+
+
 }
 
 @media screen and (min-resolution: 192dpi) and (min-width: 768px),
@@ -977,10 +991,15 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 768px)
 .footer-container {
     display: flex;
     align-items: baseline;
+    gap: 0;
 }
 
 .footer-container-logo {
     margin-right: 120px;
+}
+
+.ooter-social-list-item {
+    justify-content: left;
 }
 
 .footer-subscribe-text {
@@ -996,6 +1015,15 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 768px)
 .footer-subscribe-container {
     margin-left: 80px;
 }
+
+
+/* ========== Mobile menu ========== */
+
+
+
+/* ========== Backdrop ========== */
+
+
 
 }
 
