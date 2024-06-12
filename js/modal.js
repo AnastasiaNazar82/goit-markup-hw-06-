@@ -20,57 +20,58 @@ menuButtons.forEach(button => button.addEventListener('click', toggle));
 const form = document.querySelector('.modal-form');
 
 // Надіслати данні з форми
-form.addEventListener('input', saveFormData);
 
-function saveFormData(event) {
-  const formData = {};
-  new FormData(event.currentTarget).forEach((value, key) => {
-    formData[key] = value.trim();
-  });
+// form.addEventListener('input', saveFormData);
 
-  localStorage.setItem('feedback-form-state', JSON.stringify(formData));
-}
+// function saveFormData(event) {
+//   const formData = {};
+//   new FormData(event.currentTarget).forEach((value, key) => {
+//     formData[key] = value.trim();
+//   });
 
-window.addEventListener('load', loadFormData);
+//   localStorage.setItem('feedback-form-state', JSON.stringify(formData));
+// }
 
-function loadFormData() {
-  const savedData = localStorage.getItem('feedback-form-state');
-  if (savedData) {
-    const { name, phone, email, comment } = JSON.parse(savedData);
-    form.elements.email.value = email;
-    form.elements.phone.value = phone;
-    form.elements.name.value = name;
-    form.elements.comment.value = comment;
-  }
-}
+// window.addEventListener('load', loadFormData);
 
-form.addEventListener('submit', handleSubmit);
+// function loadFormData() {
+//   const savedData = localStorage.getItem('feedback-form-state');
+//   if (savedData) {
+//     const { name, phone, email, comment } = JSON.parse(savedData);
+//     form.elements.email.value = email;
+//     form.elements.phone.value = phone;
+//     form.elements.name.value = name;
+//     form.elements.comment.value = comment;
+//   }
+// }
 
-function handleSubmit(event) {
-  event.preventDefault();
-  localStorage.removeItem('feedback-form-state');
+// form.addEventListener('submit', handleSubmit);
 
-  const emailValue = form.elements.email.value.trim();
-  const nameValue = form.elements.name.value.trim();
-  const phoneValue = form.elements.phone.value.trim();
-  const commentValue = form.elements.comment.value.trim();
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   localStorage.removeItem('feedback-form-state');
 
-  if (
-    emailValue === '' ||
-    nameValue === '' ||
-    phoneValue === '' ||
-    commentValue === ''
-  ) {
-    console.log('Please enter your email and message!');
-    return;
-  }
+//   const emailValue = form.elements.email.value.trim();
+//   const nameValue = form.elements.name.value.trim();
+//   const phoneValue = form.elements.phone.value.trim();
+//   const commentValue = form.elements.comment.value.trim();
 
-  console.log({
-    name: nameValue,
-    phone: phoneValue,
-    email: emailValue,
-    comment: commentValue,
-  });
+//   if (
+//     emailValue === '' ||
+//     nameValue === '' ||
+//     phoneValue === '' ||
+//     commentValue === ''
+//   ) {
+//     console.log('Please enter your email and message!');
+//     return;
+//   }
 
-  form.reset();
-}
+//   console.log({
+//     name: nameValue,
+//     phone: phoneValue,
+//     email: emailValue,
+//     comment: commentValue,
+//   });
+
+//   form.reset();
+// }
