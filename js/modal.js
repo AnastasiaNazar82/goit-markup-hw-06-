@@ -5,7 +5,7 @@ const cssClasses = {
   toggleClass: 'is-open',
 };
 
-// Відкрити закрити форму
+// Відкриває та закриває модальне вікно
 const formMenu = document.querySelector(`.${cssClasses.formButton}`);
 const modal = document.querySelector(`.${cssClasses.modalWindow}`);
 const closeButton = document.querySelector(`.${cssClasses.closeButton}`);
@@ -19,7 +19,7 @@ menuButtons.forEach(button => button.addEventListener('click', toggle));
 
 const form = document.querySelector('.modal-form');
 
-// Надіслати данні з форми
+// Надісилає данні форми
 
 // form.addEventListener('input', saveFormData);
 
